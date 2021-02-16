@@ -1,6 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,300;0,500;1,300&display=swap');
-
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;1,300&display=swap');
 
 * {
   box-sizing: border-box;
@@ -88,12 +86,8 @@ article {
 
 h1,
 p,
-q,
-cite,
-small,
-a,
-button {
-  font-family: 'Newsreader', serif;
+a {
+  font-family: 'Poppins', sans-serif;
   text-rendering: optimizeLegibility;
   font-kerning: normal;
   text-decoration: none;
@@ -116,17 +110,11 @@ h1 {
   line-height: 1;
   font-weight: 400;
   text-transform: uppercase;
-
-  font-family: 'Poppins', sans-serif;
 }
 
-q {
+p {
   font-style: italic;
-  font-weight: 400;
-}
-
-cite {
-  font-size: .75rem;
+  font-weight: 300;
 }
 
 ::selection {
@@ -140,7 +128,7 @@ a {
   position: relative;
   white-space: nowrap;
   line-height: 1;
-  font-weight: 500;
+  font-weight: 600;
 
 
   font-family: 'Poppins', sans-serif;
@@ -221,10 +209,6 @@ a:hover::after {
 
   footer {
     min-height: 3.5rem;
-  }
-
-  cite {
-    display: none;
   }
 
   a {
