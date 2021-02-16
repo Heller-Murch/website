@@ -1,7 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,300;0,500;1,300&display=swap');
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap');
-
 * {
   box-sizing: border-box;
 }
@@ -10,14 +8,16 @@ html {
   height: 100%;
   display: flex;
   justify-content: center;
+  color: #1E1E1E;
   color: white;
-  background-color: #1a2144;
+  background-color: #F6F6F6;
+  background-color: #191F3A;
 }
 
 body {
   flex-grow: 1;
   margin: 0;
-  padding: 2rem 1rem .5rem 1rem;
+  padding: 1rem 1rem .5rem 1rem;
   width: 100%;
   max-width: 80rem;
   overflow-x: hidden;
@@ -25,29 +25,6 @@ body {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-}
-
-header {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  max-width: 58rem;
-  border: 2px solid;
-  border-left: none;
-  border-right: none;
-  padding: 2rem 0;
-}
-
-header img {
-  background: none;
-  border: none;
-  height: 4.25rem;
-  width: 4.25rem;
-  object-fit: contain;
-  color: white;
-  margin: 0;
-  padding: 0;
 }
 
 main {
@@ -61,7 +38,8 @@ main {
 }
 
 img {
-  max-width: 25rem;
+  width: 80vw;
+  max-width: 30rem;
   object-fit: cover;
   margin: 4rem 0 5rem 0;
   background-origin: content-box;
@@ -70,7 +48,7 @@ img {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  border: .25rem solid;
+  border: .5rem solid;
 }
 
 footer {
@@ -110,14 +88,10 @@ button {
 }
 
 h1 {
-  font-size: 6.5rem;
-  margin: 0;
-  padding: 0 2rem;
-  line-height: 1;
-  font-weight: 400;
-  text-transform: uppercase;
-
-  font-family: 'Poppins', sans-serif;
+  font-size: 5.5rem;
+  margin-top: 3.5rem;
+  padding-top: 1.25rem;
+  line-height: .55;
 }
 
 q {
@@ -139,11 +113,8 @@ a {
   cursor: pointer;
   position: relative;
   white-space: nowrap;
-  line-height: 1;
-  font-weight: 500;
-
-
-  font-family: 'Poppins', sans-serif;
+  line-height: 1.2;
+  font-weight: 400;
 }
 
 a::before,
@@ -187,11 +158,8 @@ a:hover::after {
 
 @media all and (max-width: 62rem) {
   h1 {
-    font-size: 10vw;
+    font-size: 11vw;
     white-space: nowrap;
-  }
-  header img {
-    height: 6.5vw;
   }
 }
 
@@ -200,16 +168,13 @@ a:hover::after {
     padding-bottom: 0;
   }
 
-  header {
-    padding: 1rem;
+  main {
+    border-top: 1px solid;
+    margin-bottom: 0;
   }
 
   h1 {
-    padding: 0 1rem;
-  }
-
-  header img {
-    height: 5.5vw;
+    margin: .25rem 0 1rem 0;
   }
 
   img {
@@ -227,7 +192,7 @@ a:hover::after {
 
   a {
     border: 1px solid;
-    padding: .5rem 1rem;
+    padding: .5rem 1rem .3rem 1rem;
     transition: background-color .25s ease-in-out;
   }
 
@@ -239,9 +204,9 @@ a:hover::after {
   }
 
   a:hover {
-    background-color: white;
-    border-color: white;
-    color: black;
+    background-color: black;
+    border-color: black;
+    color: white;
   }
 
 }
