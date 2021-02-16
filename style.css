@@ -15,7 +15,7 @@ html {
 body {
   flex-grow: 1;
   margin: 0;
-  padding: 1rem;
+  padding: 1rem 1rem .5rem 1rem;
   width: 100%;
   max-width: 80rem;
   overflow-x: hidden;
@@ -135,7 +135,6 @@ a button:hover {
     font-size: 8.85vw;
     white-space: nowrap;
   }
-
 }
 
 @media all and (max-width: 37rem){
@@ -171,11 +170,5 @@ a button:hover {
     padding: .25rem 1rem;
   }
 }
-
-
-
-
-
-
 
 @media (prefers-color-scheme: dark) { }
