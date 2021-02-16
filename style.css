@@ -127,7 +127,7 @@ a button:hover {
 }
 
 ::selection {
-  background: #2F2F2F;
+  background: #E6FB04;
 }
 
 @media all and (max-width: 62rem){
