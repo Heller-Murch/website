@@ -19,13 +19,10 @@ body {
   width: 100%;
   max-width: 80rem;
   overflow-x: hidden;
-
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-
-
 }
 
 main {
@@ -35,7 +32,6 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-
   border-bottom: 1px solid;
 }
 
@@ -44,7 +40,6 @@ img {
   max-width: 30rem;
   object-fit: cover;
   margin: 4rem 0 5rem 0;
-
   background-origin: content-box;
   object-fit: cover;
   background-image: url(/background.jpg);
@@ -66,12 +61,6 @@ article {
   padding: 0;
 }
 
-a button {
-  background-color: transparent;
-  border: none;
-  padding: 0;
-}
-
 h1,
 p,
 q,
@@ -80,12 +69,10 @@ small,
 a,
 button {
   font-family: 'Newsreader', serif;
-
   text-rendering: optimizeLegibility;
   font-kerning: normal;
   text-decoration: none;
   -webkit-text-size-adjust: 100%;
-
   font-size: 16px;
   font-weight: 300;
   line-height: 1.5;
@@ -93,7 +80,6 @@ button {
   padding: 0;
   font-style: normal;
   text-decoration: none;
-
   color: #1E1E1E;
 }
 
@@ -113,30 +99,66 @@ cite {
   font-size: .75rem;
 }
 
-a button {
-  font-weight: 500;
-  font-size: 1rem;
-  padding-left: .5rem;
-}
-
-a button:hover {
-  color: green;
-  cursor: pointer;
-}
-
 ::selection {
   background: #E6FB04;
 }
 
-@media all and (max-width: 62rem){
+a {
+  outline: none;
+  cursor: pointer;
+  position: relative;
+  white-space: nowrap;
+  line-height: 1.2;
+  font-weight: 400;
+}
+
+a::before,
+a::after {
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background: currentColor;
+  top: 100%;
+  left: 0;
+  pointer-events: none;
+}
+
+a::before {
+  content: '';
+  transform-origin: 100% 50%;
+  transform: scale3d(0, 1, 1);
+  transition: transform 0.3s cubic-bezier(0.2, 1, 0.8, 1);
+}
+
+a:hover::before {
+  transform-origin: 0% 50%;
+  transform: scale3d(1, 2, 1);
+  transition-timing-function: cubic-bezier(0.7, 0, 0.2, 1);
+}
+
+a::after {
+  content: '';
+  top: calc(100% + 4px);
+  transform-origin: 100% 50%;
+  transform: scale3d(0, 1, 1);
+  transition: transform 0.4s 0.1s cubic-bezier(0.2, 1, 0.8, 1);
+}
+
+a:hover::after {
+  transform-origin: 0% 50%;
+  transform: scale3d(1, 1, 1);
+  transition-timing-function: cubic-bezier(0.7, 0, 0.2, 1);
+}
+
+
+@media all and (max-width: 62rem) {
   h1 {
     font-size: 11vw;
     white-space: nowrap;
   }
 }
 
-@media all and (max-width: 37rem){
-
+@media all and (max-width: 37rem) {
   body {
     padding-bottom: 0;
   }
@@ -163,10 +185,25 @@ a button:hover {
     display: none;
   }
 
-  a button {
+  a {
     border: 1px solid;
-    padding: .25rem 1rem;
+    padding: .5rem 1rem .3rem 1rem;
+    transition: background-color .25s ease-in-out;
   }
+
+  a::before,
+  a::after,
+  a:hover::before,
+  a:hover::after {
+    display: none;
+  }
+
+  a:hover {
+    background-color: black;
+    border-color: black;
+    color: white;
+  }
+
 }
 
-@media (prefers-color-scheme: dark) { }
+@media (prefers-color-scheme: dark) {}
