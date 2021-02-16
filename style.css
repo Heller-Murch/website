@@ -37,13 +37,13 @@ main {
   align-items: center;
 
   border-bottom: 1px solid;
-
 }
 
 img {
   width: 80vw;
   max-width: 30rem;
   object-fit: cover;
+  margin: 1rem 0;
 
   background-origin: content-box;
   object-fit: cover;
@@ -159,7 +159,7 @@ a button:hover {
   }
 
   footer {
-    height: 3.5rem;
+    min-height: 3.5rem;
   }
 
   cite {
